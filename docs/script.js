@@ -1,5 +1,5 @@
 // Configuration
-const PLACE_ID = 'ChIJN1t_tDeuEmsRUsoyG83frY4'; // Place ID DÉMO (Google Sydney)
+const PLACE_ID = 'ChIJN1t_tDeuEmsRUsoyG83frY4';
 const SPAM_PREVENTION_HOURS = 24;
 
 // Éléments DOM
@@ -19,7 +19,6 @@ let selectedRating = 0;
 function hasRecentlyVoted() {
     const lastVote = localStorage.getItem('lastVoteTimestamp');
     if (!lastVote) return false;
-    
     const hoursSinceVote = (Date.now() - parseInt(lastVote)) / (1000 * 60 * 60);
     return hoursSinceVote < SPAM_PREVENTION_HOURS;
 }
@@ -37,7 +36,6 @@ stars.forEach(star => {
         }
         
         selectedRating = parseInt(this.dataset.rating);
-        
         stars.forEach(s => s.classList.remove('selected'));
         
         for (let i = 0; i < selectedRating; i++) {
@@ -76,10 +74,8 @@ submitBtn.addEventListener('click', function() {
     recordVote();
     
     if (selectedRating === 5) {
-        // Redirection Google (DÉMO - URL fictive)
         window.location.href = `https://search.google.com/local/writereview?placeid=${PLACE_ID}`;
     } else {
-        // Message remerciement
         const messages = {
             1: 'Nous sommes désolés de votre expérience. Vos remarques seront prises en compte.',
             2: 'Merci pour votre retour. Nous allons travailler à nous améliorer.',
@@ -88,9 +84,7 @@ submitBtn.addEventListener('click', function() {
         };
         
         thankYouMessage.textContent = messages[selectedRating];
-        
         ratingSection.style.display = 'none';
         thankYouSection.style.display = 'block';
     }
 });
-```
