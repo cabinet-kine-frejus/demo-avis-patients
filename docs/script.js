@@ -74,7 +74,10 @@ submitBtn.addEventListener('click', function() {
     recordVote();
     
     if (selectedRating === 5) {
-        window.location.href = `https://search.google.com/local/writereview?placeid=${PLACE_ID}`;
+        alert('DÉMO : En production, vous seriez redirigé vers Google My Business pour publier votre avis 5/5.');
+ratingSection.style.display = 'none';
+thankYouSection.style.display = 'block';
+thankYouMessage.textContent = 'Merci ! (Démo : pas de vraie redirection Google)';
     } else {
         const messages = {
             1: 'Nous sommes désolés de votre expérience. Vos remarques seront prises en compte.',
