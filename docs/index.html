@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Démo du système d'avis QR code">
+    <title>Démo - Système d'Avis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="cabinet-header">
+            <div class="cabinet-info">
+                <h1>Cabinet de Santé<br>VERSION DÉMO</h1>
+                <p class="practitioner">Testez le système d'avis</p>
+                <p class="location">📍 Version de démonstration</p>
+            </div>
+        </header>
+        <section class="main-content" id="rating-section">
+            <div class="icon">📊</div>
+            <h2>Votre avis compte</h2>
+            <p class="subtitle">Testez le système : essayez 5/5 puis 3/5 pour voir la différence.</p>
+            
+            <div class="benefits">
+                <div class="benefit">✓ Anonyme et rapide (30 secondes)</div>
+                <div class="benefit">✓ Aucune donnée personnelle collectée</div>
+            </div>
+            <div class="rating-form">
+                <label class="rating-label">Comment évaluez-vous votre prise en charge ?</label>
+                
+                <div class="stars" id="star-rating">
+                    <span class="star" data-rating="1">⭐</span>
+                    <span class="star" data-rating="2">⭐</span>
+                    <span class="star" data-rating="3">⭐</span>
+                    <span class="star" data-rating="4">⭐</span>
+                    <span class="star" data-rating="5">⭐</span>
+                </div>
+                <p class="rating-text" id="rating-text">Cliquez sur les étoiles</p>
+                <div class="comment-section" id="comment-section" style="display: none;">
+                    <label for="comment">💬 Commentaire (facultatif)</label>
+                    <textarea 
+                        id="comment" 
+                        placeholder="Partagez votre ressenti pour nous aider à progresser..."
+                        maxlength="500"
+                        rows="4"
+                    ></textarea>
+                    <p class="char-count"><span id="char-count">0</span>/500 caractères</p>
+                </div>
+                <button class="submit-btn" id="submit-btn" disabled>
+                    Envoyer mon avis
+                </button>
+            </div>
+            <div class="rgpd-notice">
+                🔒 <strong>Conforme RGPD</strong> - Aucune donnée collectée sur ce site.<br>
+                Publication des avis selon les normes Google.
+            </div>
+        </section>
+        <section class="thank-you" id="thank-you-section" style="display: none;">
+            <div class="icon success">✅</div>
+            <h2>Merci pour votre retour !</h2>
+            <p class="thank-you-message" id="thank-you-message"></p>
+            <p class="subtitle">Votre contribution nous aide à progresser chaque jour.</p>
+            
+            <div class="additional-info">
+                <p><strong>Cabinet de Santé - Version DÉMO</strong></p>
+                <p>Système de filtrage d'avis intelligent</p>
+                <p>📞 Testez avec différentes notes pour voir le comportement</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>Version de démonstration - Système d'avis QR code</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
