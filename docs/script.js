@@ -94,25 +94,3 @@ submitBtn.addEventListener('click', function() {
     }
 });
 ```
-
-**4.4** Commit : `Add script.js`
-
----
-
-## ÉTAPE 5 : Activer GitHub Pages
-
-**5.1** Dans ton repo, clique sur **Settings** (en haut)
-
-**5.2** Dans le menu gauche, clique sur **Pages**
-
-**5.3** Sous "Source", sélectionne :
-- Branch : **main**
-- Folder : **/docs**
-
-**5.4** Clique sur **Save**
-
-**5.5** Attends 2 minutes
-
-**5.6** Rafraîchis la page → Tu verras l'URL :
-```
-https://ton-username.github.io/demo-avis-patients/
